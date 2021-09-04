@@ -124,7 +124,7 @@ columns=fullflexible
 \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
 \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
 \vspace{3cm}
-\title{Assignment No.4}
+\title{Assignment No.5}
 \author{Valli Devi Bolla}
 \maketitle
 \newpage
@@ -133,19 +133,21 @@ columns=fullflexible
 \renewcommand{\thetable}{\theenumi}
 Download all python codes from
 \begin{lstlisting}
-https://github.com/Vallidevibolla/Assignment-5/blob/main/code.py
+https://github.com/Vallidevibolla/Assignment-4/blob/main/code.py
 \end{lstlisting}
 %
 and latex-tikz codes from
 %
 \begin{lstlisting}
-https://github.com/Vallidevibolla/Assignment-5/blob/main/main.tex
+https://github.com/Vallidevibolla/Assignment-4/blob/main/main.tex
 \end{lstlisting}
 %
 Question taken from
 \begin{lstlisting}
 https://github.com/gadepall/ncert/blob/main/linalg/quadratic_forms/gvv_ncert_quadratic_forms.pdf-Q.no.2.7
 \end{lstlisting}
+%
+%https://github.com/gadepall/ncert/blob/main/linalg/linman/chapters/conics/tangent_normal.tex
 %
 \section{Question 2.7}
 Find the area of the region bounded by curve 
@@ -156,17 +158,70 @@ y = x^2
 \end{align}
 and the lines \vec{x}=1,\vec{x}=4 and x-axis in the first quadrant.
 \\
-\solution \eqref{eq:parab} can be expressed as
+\section{solution}
+
+\item 
+{\em Secant: }The points of intersection of the line 
+\begin{align}
+L: \quad \vec{x} = \vec{q} + \mu \vec{m} \quad \mu \in \mathbb{R}
+\label{eq:conic_tangent}
+\end{align}
+
+\begin{align}\label{eq:parametricform}
+\vec{x}_i = \vec{q} + \mu_i \vec{m}
+\end{align}
+%
+where
+\begin{multline}
+\mu_i = \frac{1}
+{
+\vec{m}^T\vec{V}\vec{m}
+}
+\lbrak{-\vec{m}^T\brak{\vec{V}\vec{q}+\vec{u}}}
+\\
+\pm
+{\small
+\rbrak{\sqrt{
+\sbrak{
+\vec{m}^T\brak{\vec{V}\vec{q}+\vec{u}}
+}^2
+-
+\brak
+{
+\vec{q}^T\vec{V}\vec{q} + 2\vec{u}^T\vec{q} +f
+}
+\brak{\vec{m}^T\vec{V}\vec{m}}
+}
+}
+}
+\label{eq:tangent_roots}
+\end{multline}
+                    
+$\because \vec{q}$ is the point of contact, $\vec{q}$ satisfies parabola equation
+and 
+\begin{align}
+\vec{q}^T\vec{V}\vec{q} + 2\vec{u}^T\vec{q} +f = 0
+\label{eq:conic_tangent_qquad}
+\end{align}
+
+\item 
+Given the point of contact $\vec{q}$, the equation of a tangent is 
+\begin{align}
+\brak{\vec{V}\vec{q}+\vec{u}}^T\vec{x}+\vec{u}^T\vec{q}+f = 0
+\label{eq:conic_tangent_final}
+\end{align}
+\eqref{eq:parab} can be written as
 \begin{align}
  y^2  -x &= 0
 \label{eq:parab_twovar}
 \end{align}
-\eqref{eq:parab_twovar}which has the form 
+\eqref{eq:parab_twovar}which has the form of
 \begin{align}\label{eq:conic_quad form}
 ax^2+2bxy+cy^2+2dy+2ex+f &= 0
-\end{align}with parameters
+\end{align}
+The matrix parameters  are
 \begin{align}
-\vec{V} = \myvec{0 & 0\\0 & 1}, \vec{u} = \myvec{\frac{-1}{2}\\0}.
+\vec{V} = \myvec{0 & 0\\0 & 1}, \vec{u} = \myvec{\frac{-1}{2}\\0}, \vec{f}=0.
 \label{eq:parab_twovar_params}
 \end{align}
 Thus, the given curve is a parabola.  $\because \vec{V}$ is diagonal and in standard form,
@@ -177,24 +232,41 @@ Also,
 \implies \vec{p} &= \myvec{1\\0}
 \label{eq:parab_twovar_p}
 \end{align}
+with eigen parameters\\
+\begin{align}
+\lambda_1=0, \lambda_2=1
+\end{align}
 Given \vec{x}=1  Using \eqref{eq:parab} we get
 \begin{align}
 \vec{x}=\myvec{1\\0}+\vec{y}\myvec{0\\1}\\
 \myvec{1 & 0}\vec{x}=\myvec{1 & 0}\myvec{1\\0}+\vec{y}\myvec{1 & 0}\myvec{0\\1}\\
-\myvec{1 & 0}\vec{x}=1
+\myvec{1 & 0}\vec{x}=1\label{eq:line1}
 \end{align}
 Similarly, \vec{x}=4 we get
-\begin{align}
+\begin{align}\label{eq:line2}
 \myvec{4 & 0}\vec{x}=16
 \end{align}
-The focus is 2 and the vertex $\vec{c}$ is
+
+The vertex of parabola can be expressed using \eqref{eq:line1}
 \begin{align}
-\myvec{ 1 & \frac{-1}{2} \\ 0 & 0 \\ 0 & 1}\vec{c} &= \myvec{1 \\ 0\\\frac{-1}{2}} 
+\label{eq:vertex}
+\begin{pmatrix}
+\vec{u^T+n \vec{p}}^T \\ \vec{V}
+\end{pmatrix}
+\vec{c} &= 
+\begin{pmatrix}
+-f
+\\
+\vec{n}\vec{p}-\vec{u}
+\end{pmatrix}
+\end{align}
+\begin{align}
+\myvec{ 1 & \frac{1}{2} \\ 0 & 0 \\ 0 & 0}\vec{c} &= \myvec{-1 \\ 0\\\frac{-1}{2}} 
 \\
 \implies 
-\myvec{ 1 & \frac{-1}{2} \\  0 & 1}\vec{c} &= \myvec{1 \\ \frac{-1}{2}} 
+\myvec{ 1 & \frac{1}{2} \\  0 & 0}\vec{c} &= \myvec{-1 \\ \frac{-1}{2}} 
 \\
-\text{or, } \vec{c} = \myvec{\frac{3}{4}\\\frac{-1}{2}}
+\text{or, } \vec{c} = \myvec{\frac{-7}{2}\\5}
 \end{align}
 The direction vector and normal vectors are
 \begin{align}
@@ -229,8 +301,36 @@ and simplification yields the matrix equation
 \\
 \text{or, } \vec{q} &= \myvec{\frac{-1}{4}\\\frac{1}{2}}
 \end{align}
-Fig. \ref{fig:parab_tangent}	verifies the above results.
-%
+From \eqref{eq:tangent_roots} we get \\
+\mu_1=\frac{1}{2}, \mu_2=\frac{-1}{2}
+
+The lines \eqref{eq:line1}, \eqref{eq:line2} can be written in parametric form in \eqref{eq:parametricform} we get\\
+\begin{align}\label{eq:para1}
+\vec{x}_i_1 = \myvec{\frac{-1}{4}\\ \frac{1}{2}} + \mu_i \myvec{0\\1}\\
+\vec{x}_i_2 = \myvec{\frac{-1}{4}\\ \frac{1}{2}} + \mu_i \myvec{0\\4}
+\label{eq:para2}
+\end{align}
+Substituting \mu_1 and \mu_2 values in \eqref{eq:para1},\eqref{eq:para2} we get
+
+\begin{align}
+\vec{K_1}=\myvec{\frac{-1}{4}\\1}, \vec{L_1}=\myvec{\frac{-1}{4}\\0}\\
+\vec{K_2}=\myvec{\frac{-1}{4}\\\frac{5}{2}}, \vec{L_2}=\myvec{\frac{-1}{4}\\\frac{-3}{2}}
+\end{align}
+
+The area enclosed by parabola and line can be given as\\
+A = Area under line - Area under curve\\
+\implies\boxed{\vec{A} = \vec{A_1}-\vec{A_3}} \label{eq:A}\\
+Thus area under the lines \eqref{eq:line1} , \eqref{eq:line2}i.e, \\
+\vec{A_1}=\frac{1}{2}
+\\
+\vec{A_2)=\frac{-17}{2}
+
+Area under the parabola\eqref{eq:parab} i.e,\\
+$\int$\vec{A_3}= \sqrt{x}dx\\
+\boxed{\vec{A_3}=\frac{14}{3}}\\
+Putting these values in \eqref{eq:A} we get\\
+\vec{A}=-4.17,-13.17 units
+
 \numberwithin{figure}{section}
 \begin{figure}[!ht]
 \centering
@@ -238,7 +338,5 @@ Fig. \ref{fig:parab_tangent}	verifies the above results.
 \caption{Tangent to  parabola in \eqref{eq:parab}  with slope $\frac{1}{5}$. }
 \label{fig:parab_tangent}	
 \end{figure}
-
-
 
 \end{document}
