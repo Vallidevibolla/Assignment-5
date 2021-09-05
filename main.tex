@@ -158,8 +158,98 @@ y = x^2
 \end{align}
 and the lines \vec{x}=1,\vec{x}=4 and x-axis in the first quadrant.
 \\
-\section{solution}
+\section{Solution}
+\eqref{eq:parab} can be written as
+\begin{align}
+ y^2  -x &= 0
+\label{eq:parab_twovar}
+\end{align}
+\eqref{eq:parab_twovar}which has the form of
+\begin{align}\label{eq:conic_quad form}
+ax^2+2bxy+cy^2+2dy+2ex+f &= 0
+\end{align}
+The matrix parameters  are
+\begin{align}
+\vec{V} = \myvec{0 & 0\\0 & 1}, \vec{u} = \myvec{\frac{-1}{2}\\0}, \vec{f}=0.
+\label{eq:parab_twovar_params}
+\end{align}
+Thus, the given curve is a parabola.  $\because \vec{V}$ is diagonal and in standard form,
+Also, 
+\begin{align}
+\vec{V}\vec{p} &= \vec{0}
+\\
+\implies \vec{p} &= \myvec{1\\0}
+\label{eq:parab_twovar_p}
+\end{align}
+with eigen parameters\\
+\begin{align}
+\lambda_1=0, \lambda_2=1
+\end{align}
+Given \vec{x}=1  Using \eqref{eq:parab} we get
+\begin{align}
+\vec{x}=\myvec{1\\0}+\vec{y}\myvec{0\\1}\\
+\myvec{1 & 0}\vec{x}=\myvec{1 & 0}\myvec{1\\0}+\vec{y}\myvec{1 & 0}\myvec{0\\1}\\
+\myvec{1 & 0}\vec{x}=1\label{eq:line1}
+\end{align}
+Similarly, \vec{x}=4 we get
+\begin{align}\label{eq:line2}
+\myvec{4 & 0}\vec{x}=16
+\end{align}
 
+The vertex of parabola can be expressed using \myvec{1 & 0}\vec{x}=4
+\begin{align}
+\label{eq:vertex}
+\begin{pmatrix}
+\vec{u^T+n \vec{p}}^T \\ \vec{V}
+\end{pmatrix}
+\vec{c} &= 
+\begin{pmatrix}
+-f
+\\
+\vec{n}\vec{p}-\vec{u}
+\end{pmatrix}
+\end{align}
+\begin{align}
+\myvec{ 1 & \frac{1}{2} \\ 0 & 0 \\ 0 & 0}\vec{c} &= \myvec{-4 \\ 0\\\frac{-1}{2}} 
+\\
+\implies 
+\myvec{ 1 & \frac{1}{2} \\  0 & 0}\vec{c} &= \myvec{-4 \\ \frac{-1}{2}} 
+\\
+\text{or, } \vec{c} = \myvec{\frac{-13}{2}\\5}
+\end{align}
+The direction vector and normal vectors are
+\begin{align}
+\vec{m} = \myvec{5\\1}, \vec{n} = \myvec{1\\-5}.
+\label{eq:parab_twovar_mn}
+\end{align}
+\begin{align}
+\label{eq:conic_tangent_qk_eigen} \kappa = \frac{\vec{p}_1^T\vec{u}}{\vec{p}_1^T\vec{n}}, \quad 
+\end{align}
+From \eqref{eq:conic_tangent_qk_eigen}, \eqref{eq:parab_twovar_mn} and \eqref{eq:parab_twovar_p},
+\begin{align}
+\kappa = 0
+\end{align}
+which, upon substitution in  \eqref{eq:conic_tangent_q_eigen}
+\begin{align}
+\label{eq:conic_tangent_q_eigen}
+\begin{pmatrix}
+\vec{u+\kappa \vec{n}}^T \\ \vec{V}
+\end{pmatrix}
+\vec{q} &= 
+\begin{pmatrix}
+-f
+\\
+\kappa\vec{n}-\vec{u}
+\end{pmatrix}
+\end{align}
+and simplification yields the matrix equation
+\begin{align}
+\myvec{0 & \frac{-1}{2}\\0 & 0\\0&1}\vec{q} &= \myvec{0\\0\\\frac{1}{2}}
+\\
+\implies \myvec{0 & \frac{-1}{2}\\0&1}\vec{q} &= \myvec{0\\\frac{1}{2}}
+\\
+\text{or, } \vec{q} &= \myvec{\frac{-1}{4}\\\frac{1}{2}}
+\end{align}
 \item 
 {\em Secant: }The points of intersection of the line 
 \begin{align}
@@ -210,97 +300,7 @@ Given the point of contact $\vec{q}$, the equation of a tangent is
 \brak{\vec{V}\vec{q}+\vec{u}}^T\vec{x}+\vec{u}^T\vec{q}+f = 0
 \label{eq:conic_tangent_final}
 \end{align}
-\eqref{eq:parab} can be written as
-\begin{align}
- y^2  -x &= 0
-\label{eq:parab_twovar}
-\end{align}
-\eqref{eq:parab_twovar}which has the form of
-\begin{align}\label{eq:conic_quad form}
-ax^2+2bxy+cy^2+2dy+2ex+f &= 0
-\end{align}
-The matrix parameters  are
-\begin{align}
-\vec{V} = \myvec{0 & 0\\0 & 1}, \vec{u} = \myvec{\frac{-1}{2}\\0}, \vec{f}=0.
-\label{eq:parab_twovar_params}
-\end{align}
-Thus, the given curve is a parabola.  $\because \vec{V}$ is diagonal and in standard form,
-Also, 
-\begin{align}
-\vec{V}\vec{p} &= \vec{0}
-\\
-\implies \vec{p} &= \myvec{1\\0}
-\label{eq:parab_twovar_p}
-\end{align}
-with eigen parameters\\
-\begin{align}
-\lambda_1=0, \lambda_2=1
-\end{align}
-Given \vec{x}=1  Using \eqref{eq:parab} we get
-\begin{align}
-\vec{x}=\myvec{1\\0}+\vec{y}\myvec{0\\1}\\
-\myvec{1 & 0}\vec{x}=\myvec{1 & 0}\myvec{1\\0}+\vec{y}\myvec{1 & 0}\myvec{0\\1}\\
-\myvec{1 & 0}\vec{x}=1\label{eq:line1}
-\end{align}
-Similarly, \vec{x}=4 we get
-\begin{align}\label{eq:line2}
-\myvec{4 & 0}\vec{x}=16
-\end{align}
 
-The vertex of parabola can be expressed using \eqref{eq:line1}
-\begin{align}
-\label{eq:vertex}
-\begin{pmatrix}
-\vec{u^T+n \vec{p}}^T \\ \vec{V}
-\end{pmatrix}
-\vec{c} &= 
-\begin{pmatrix}
--f
-\\
-\vec{n}\vec{p}-\vec{u}
-\end{pmatrix}
-\end{align}
-\begin{align}
-\myvec{ 1 & \frac{1}{2} \\ 0 & 0 \\ 0 & 0}\vec{c} &= \myvec{-1 \\ 0\\\frac{-1}{2}} 
-\\
-\implies 
-\myvec{ 1 & \frac{1}{2} \\  0 & 0}\vec{c} &= \myvec{-1 \\ \frac{-1}{2}} 
-\\
-\text{or, } \vec{c} = \myvec{\frac{-7}{2}\\5}
-\end{align}
-The direction vector and normal vectors are
-\begin{align}
-\vec{m} = \myvec{5\\1}, \vec{n} = \myvec{1\\-5}.
-\label{eq:parab_twovar_mn}
-\end{align}
-\begin{align}
-\label{eq:conic_tangent_qk_eigen} \kappa = \frac{\vec{p}_1^T\vec{u}}{\vec{p}_1^T\vec{n}}, \quad 
-\end{align}
-From \eqref{eq:conic_tangent_qk_eigen}, \eqref{eq:parab_twovar_mn} and \eqref{eq:parab_twovar_p},
-\begin{align}
-\kappa = 0
-\end{align}
-which, upon substitution in  \eqref{eq:conic_tangent_q_eigen}
-\begin{align}
-\label{eq:conic_tangent_q_eigen}
-\begin{pmatrix}
-\vec{u+\kappa \vec{n}}^T \\ \vec{V}
-\end{pmatrix}
-\vec{q} &= 
-\begin{pmatrix}
--f
-\\
-\kappa\vec{n}-\vec{u}
-\end{pmatrix}
-\end{align}
-and simplification yields the matrix equation
-\begin{align}
-\myvec{0 & \frac{-1}{2}\\0 & 0\\0&1}\vec{q} &= \myvec{0\\0\\\frac{1}{2}}
-\\
-\implies \myvec{0 & \frac{-1}{2}\\0&1}\vec{q} &= \myvec{0\\\frac{1}{2}}
-\\
-\text{or, } \vec{q} &= \myvec{\frac{-1}{4}\\\frac{1}{2}}
-\end{align}
 From \eqref{eq:tangent_roots} we get \\
 \mu_1=\frac{1}{2}, \mu_2=\frac{-1}{2}
 
