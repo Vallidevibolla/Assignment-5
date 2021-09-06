@@ -133,13 +133,13 @@ columns=fullflexible
 \renewcommand{\thetable}{\theenumi}
 Download all python codes from
 \begin{lstlisting}
-https://github.com/Vallidevibolla/Assignment-4/blob/main/code.py
+https://github.com/Vallidevibolla/Assignment-5/blob/main/code.py
 \end{lstlisting}
 %
 and latex-tikz codes from
 %
 \begin{lstlisting}
-https://github.com/Vallidevibolla/Assignment-4/blob/main/main.tex
+https://github.com/Vallidevibolla/Assignment-5/blob/main/main.tex
 \end{lstlisting}
 %
 Question taken from
@@ -310,11 +310,19 @@ The lines \eqref{eq:line1}, \eqref{eq:line2} can be written in parametric form i
 \vec{x}_i_2 = \myvec{\frac{-1}{4}\\ \frac{1}{2}} + \mu_i \myvec{0\\4}
 \label{eq:para2}
 \end{align}
-Substituting \mu_1 and \mu_2 values in \eqref{eq:para1},\eqref{eq:para2} we get
+Consider \vec{x}_i as \vec{K} for value \mu_1 and \vec{L} for \mu_2\\
+Substituting \mu_1 and \mu_2 values in \eqref{eq:para1} we get
 
 \begin{align}
-\vec{K_1}=\myvec{\frac{-1}{4}\\1}, \vec{L_1}=\myvec{\frac{-1}{4}\\0}\\
-\vec{K_2}=\myvec{\frac{-1}{4}\\\frac{5}{2}}, \vec{L_2}=\myvec{\frac{-1}{4}\\\frac{-3}{2}}
+\vec{x}_i_1 = \myvec{\frac{-1}{4}\\ \frac{1}{2}} + \frac{1}{2}\myvec{0\\1}\\
+\implies\vec{K_1}=\myvec{\frac{-1}{4}\\1}\\
+\vec{x}_i_1 = \myvec{\frac{-1}{4}\\ \frac{1}{2}} + \frac{-1}{2}\myvec{0\\1}\\
+\implies\vec{L_1}=\myvec{\frac{-1}{4}\\0}
+\end{align}
+Similarly Substituting \mu_1 and \mu_2 values in \eqref{eq:para2}\\
+
+\begin{align}
+ \vec{K_2}=\myvec{\frac{-1}{4}\\\frac{5}{2}}, \vec{L_2}=\myvec{\frac{-1}{4}\\\frac{-3}{2}}   
 \end{align}
 
 The area enclosed by parabola and line can be given as\\
