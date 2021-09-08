@@ -167,7 +167,7 @@ y^2 - x &= 0
 
 The matrix parameters  are
 \begin{align}
-\vec{V} = \myvec{0 & 0\\0 & 1}, \vec{u} = \myvec{0\\\frac{-1}{2}}, \vec{f}=0.
+\vec{V} = \myvec{0 & 0\\0 & 1}, \vec{u} = \myvec{\frac{-1}{2}\\0}, \vec{f}=0.
 \label{eq:parab_twovar_params}
 \end{align}
 Thus, the given curve is a parabola.  $\because \vec{V}$ is diagonal and in standard form,
@@ -217,17 +217,12 @@ The vertex of conic section in \eqref{eq:conic_tangent_qquad} is given by \vec{c
 \end{pmatrix}
 \end{align}
 \begin{align}
-\myvec{ 1 & \frac{1}{2} \\ 0 & 0 \\ 0 & 0}\vec{c} &= \myvec{1 \\ 0\\\frac{-1}{2}} 
+\myvec{\frac{1}{2} & 0 \\ 0 & 0 \\ 0 & 1}\vec{c} &= \myvec{0 \\ 0\\\frac{3}{2}} 
 \\
 \implies 
-\myvec{ 1 & \frac{1}{2} \\  0 & 0}\vec{c} &= \myvec{1 \\ \frac{-1}{2}} 
+\myvec{\frac{1}{2} & 0 \\  0 & 1}\vec{c} &= \myvec{0 \\ \frac{3}{2}} 
 \\
-\text{or, } \vec{c} = \myvec{1\\-3}
-\end{align}
-\begin{align}
-\vec{y} = \vec{P}^T\myvec{x-c}\\
-\vec{y} = \myvec{1 & 0}\myvec{1-1\\0-(-3)}\\
-\implies\vec{y} = 0
+\text{or, } \vec{c} = \myvec{0\\\frac{3}{2}}
 \end{align}
 \begin{align}
 \label{eq:conic_tangent_qk_eigen} \kappa = \frac{\vec{p}_1^T\vec{u}}{\vec{p}_1^T\vec{n}}, \quad 
@@ -251,11 +246,11 @@ which, upon substitution in  \eqref{eq:conic_tangent_q_eigen}
 \end{align}
 and simplification yields the matrix equation
 \begin{align}
-\myvec{0 & \frac{-1}{2}\\0 & 0\\0&1}\vec{q} &= \myvec{0\\0\\\frac{1}{2}}
+\myvec{\frac{-1}{2} & 0 \\0 & 0\\0&1}\vec{q} &= \myvec{0\\0\\\frac{1}{2}}
 \\
-\implies \myvec{0 & \frac{-1}{2}\\0&1}\vec{q} &= \myvec{0\\\frac{1}{2}}
+\implies \myvec{\frac{-1}{2} & 0\\0&1}\vec{q} &= \myvec{0\\\frac{1}{2}}
 \\
-\text{or, } \vec{q} &= \myvec{\frac{3}{4}\\\frac{1}{2}}
+\text{or, } \vec{q} &= \myvec{0 \\\frac{1}{2}}
 \end{align}
 \item 
 {\em Secant: }The points of intersection of the line 
@@ -303,19 +298,17 @@ Given the point of contact $\vec{q}$, the equation of a tangent is
 \end{align}
 
 From \eqref{eq:tangent_roots} we get \\
-\mu_1=\frac{3}{4}, \mu_2=\frac{-3}{4}
+\mu_=\frac{-1}{2}
 
 The lines \eqref{eq:line1}, \eqref{eq:line2} can be written in parametric form in \eqref{eq:parametricform} we get\\
 \begin{align}\label{eq:para1}
 \vec{x}_i = \myvec{\frac{3}{4}\\ \frac{1}{2}} + \mu_i \myvec{0\\1}
 \end{align}
-Substituting \mu_1 and \mu_2 values in \eqref{eq:para1} we get
+Substituting \mu value in \eqref{eq:para1} we get
 
 \begin{align}
-\vec{x}_i_1 = \myvec{\frac{3}{4}\\ \frac{1}{2}} + \frac{3}{4}\myvec{0\\1}\\
-\implies\vec{K}=\myvec{\frac{3}{4}\\\frac{5}{4}}\\
-\vec{x}_i_1 = \myvec{\frac{3}{4}\\ \frac{1}{2}} + \frac{-3}{4}\myvec{0\\1}\\
-\implies\vec{L}=\myvec{\frac{3}{4}\\\frac{-1}{4}}
+\vec{x}_i_1 = \myvec{0\\ \frac{1}{2}} + \frac{-1}{2}\myvec{0\\1}\\
+\implies\vec{K}=\myvec{0\\0}
 \end{align}
 The area enclosed by parabola and line can be given as\\
 A = Area under line - Area under curve
