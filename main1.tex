@@ -203,14 +203,31 @@ The equation of parabola is
 \vec{q}^T\vec{V}\vec{q} + 2\vec{u}^T\vec{q} +f = 0
 \label{eq:conic_tangent_qquad}
 \end{align}\\
-The vertex of conic section in \eqref{eq:conic_tangent_qquad} is given by \vec{c} using  \eqref{eq:1} 
-
+The vertex of conic section in \eqref{eq:conic_tangent_qquad} is given by \vec{c} using  
 \begin{align}
-\boxed{\vec{c} = -\vec{V}^{-1}\vec{u}}\label{eq:1}
+\label{eq:vertex}
+\begin{pmatrix}
+\vec{u^T+n \vec{p}}^T \\ \vec{V}
+\end{pmatrix}
+\vec{c} &= 
+\begin{pmatrix}
+-f
+\\
+\vec{n}\vec{p}-\vec{u}
+\end{pmatrix}
 \end{align}
 \begin{align}
-\vec{c} = -\myvec{0 & 0 \\ 0& 1}^{-1}\myvec{0\\\frac{-1}{2}}\\
-\implies\vec{c} = \myvec{0\\ 0}
+\myvec{ 1 & \frac{1}{2} \\ 0 & 0 \\ 0 & 0}\vec{c} &= \myvec{1 \\ 0\\\frac{-1}{2}} 
+\\
+\implies 
+\myvec{ 1 & \frac{1}{2} \\  0 & 0}\vec{c} &= \myvec{1 \\ \frac{-1}{2}} 
+\\
+\text{or, } \vec{c} = \myvec{1\\-3}
+\end{align}
+\begin{align}
+\vec{y} = \vec{P}^T\myvec{x-c}\\
+\vec{y} = \myvec{1 & 0}\myvec{1-1\\0-(-3)}\\
+\implies\vec{y} = 0
 \end{align}
 \begin{align}
 \label{eq:conic_tangent_qk_eigen} \kappa = \frac{\vec{p}_1^T\vec{u}}{\vec{p}_1^T\vec{n}}, \quad 
