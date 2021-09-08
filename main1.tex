@@ -198,13 +198,20 @@ The direction vector and normal vectors are
 \vec{m} = \myvec{0\\1}, \vec{n} = \myvec{1\\0}.
 \label{eq:parab_twovar_mn}
 \end{align}
-The vertex of parabola can be expressed using \myvec{1 & 0}\vec{x}=4\\
-Let vertex =\myvec{h, k}, x-coordinate of parabola is given as
+The equation of parabola is
 \begin{align}
-\vec{h} = \frac{-b}{2a} &= 0\\
-\vec{k} = \vec{h^2} &= 0
+\vec{q}^T\vec{V}\vec{q} + 2\vec{u}^T\vec{q} +f = 0
+\label{eq:conic_tangent_qquad}
+\end{align}\\
+The vertex of conic section in \eqref{eq:conic_tangent_qquad} is given by \vec{c} using  \eqref{eq:1} 
+
+\begin{align}
+\boxed{\vec{c} = -\vec{V}^{-1}\vec{u}}\label{eq:1}
 \end{align}
-$\therefore$ Vertex = \myvec{0, 0}
+\begin{align}
+\vec{c} = -\myvec{0 & 0 \\ 0& 1}^{-1}\myvec{0\\\frac{-1}{2}}\\
+\implies\vec{c} = \myvec{0\\ 0}
+\end{align}
 \begin{align}
 \label{eq:conic_tangent_qk_eigen} \kappa = \frac{\vec{p}_1^T\vec{u}}{\vec{p}_1^T\vec{n}}, \quad 
 \end{align}
@@ -270,11 +277,6 @@ where
 \end{multline}
                     
 $\because \vec{q}$ is the point of contact, $\vec{q}$ satisfies parabola equation
-and 
-\begin{align}
-\vec{q}^T\vec{V}\vec{q} + 2\vec{u}^T\vec{q} +f = 0
-\label{eq:conic_tangent_qquad}
-\end{align}
 
 \item 
 Given the point of contact $\vec{q}$, the equation of a tangent is 
@@ -298,21 +300,24 @@ Substituting \mu_1 and \mu_2 values in \eqref{eq:para1} we get
 \vec{x}_i_1 = \myvec{\frac{3}{4}\\ \frac{1}{2}} + \frac{-3}{4}\myvec{0\\1}\\
 \implies\vec{L}=\myvec{\frac{3}{4}\\\frac{-1}{4}}
 \end{align}
-
-
 The area enclosed by parabola and line can be given as\\
-A = Area under line - Area under curve\\
-\implies\boxed{\vec{A} = \vec{A_1}-\vec{A_3}} \label{eq:A}\\
-Thus area under the lines \eqref{eq:line1} , \eqref{eq:line2}i.e, \\
-\vec{A_1}=\frac{1}{2}
-\\
-\vec{A_2)=\frac{-17}{2}
+A = Area under line - Area under curve
+\begin{align}
+\implies\boxed{\vec{A} = \vec{A_1}-\vec{A_3}} \label{eq:A}
+\end{align}
+Thus area under the lines \eqref{eq:line1} , \eqref{eq:line2} is given by
 
-Area under the parabola\eqref{eq:parab} i.e,\\
-$\int$\vec{A_3}= \sqrt{\vec{x}dx \\
-\boxed{\vec{A_3}=\frac{14}{3}}\\
+\vec{A_1} =\frac{1}{2},
+\vec{A_2}=\frac{-17}{2}   
+  
+Area under the parabola\eqref{eq:parab} i.e,
+
+\vec{A_3} =$\int$\vec{x}^\frac{1}{2} dx \\
+\implies\boxed{\vec{A_3} =\frac{14}{3}}
+
 Putting these values in \eqref{eq:A} we get\\
-\vec{A}=-4.17,-13.17 units
+\vec{A} =-4.17,-13.17 units
+
 
 \numberwithin{figure}{section}
 \begin{figure}[!ht]
