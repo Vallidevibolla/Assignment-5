@@ -229,7 +229,7 @@ The vertex of conic section in \eqref{eq:conic_tangent_qquad} is given by \vec{c
 \end{align}
 From \eqref{eq:conic_tangent_qk_eigen}, \eqref{eq:parab_twovar_mn} and \eqref{eq:parab_twovar_p},
 \begin{align}
-\kappa = 0
+\kappa = \frac{-1}{2}
 \end{align}
 which, upon substitution in  \eqref{eq:conic_tangent_q_eigen}
 \begin{align}
@@ -246,11 +246,11 @@ which, upon substitution in  \eqref{eq:conic_tangent_q_eigen}
 \end{align}
 and simplification yields the matrix equation
 \begin{align}
-\myvec{\frac{-1}{2} & 0 \\0 & 0\\0&1}\vec{q} &= \myvec{0\\0\\\frac{1}{2}}
+\myvec{\frac{-1}{2} & 0 \\0 & 0\\0&1}\vec{q} &= \myvec{0\\0\\0}
 \\
-\implies \myvec{\frac{-1}{2} & 0\\0&1}\vec{q} &= \myvec{0\\\frac{1}{2}}
+\implies \myvec{\frac{-1}{2} & 0\\0&1}\vec{q} &= \myvec{0\\0}
 \\
-\text{or, } \vec{q} &= \myvec{0 \\\frac{1}{2}}
+\text{or, } \vec{q} &= \myvec{0 \\0}
 \end{align}
 \item 
 {\em Secant: }The points of intersection of the line 
@@ -298,16 +298,16 @@ Given the point of contact $\vec{q}$, the equation of a tangent is
 \end{align}
 
 From \eqref{eq:tangent_roots} we get \\
-\mu_=\frac{-1}{2}
+\mu_i= 0
 
 The lines \eqref{eq:line1}, \eqref{eq:line2} can be written in parametric form in \eqref{eq:parametricform} we get\\
 \begin{align}\label{eq:para1}
-\vec{x}_i = \myvec{ 0\\ \frac{1}{2}} + \mu_i \myvec{0\\1}
+\vec{x}_i = \myvec{ 0\\ 0} + \mu_i \myvec{0\\1}
 \end{align}
 Substituting \mu value in \eqref{eq:para1} we get
 
 \begin{align}
-\vec{x}_i_1 = \myvec{0\\ \frac{1}{2}} + \frac{-1}{2}\myvec{0\\1}\\
+\vec{x}_i_1 = \myvec{0\\0} + 0\myvec{0\\1}\\
 \implies\vec{K}=\myvec{0\\0}
 \end{align}
 The area enclosed by parabola and line can be given as\\
