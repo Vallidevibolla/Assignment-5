@@ -298,17 +298,33 @@ Given the point of contact $\vec{q}$, the equation of a tangent is
 \end{align}
 
 From \eqref{eq:tangent_roots} we get \\
-\mu_i= 1
+\mu_1= 1, \mu_2= -1
 
 The lines \eqref{eq:line1}, \eqref{eq:line2} can be written in parametric form in \eqref{eq:parametricform} we get\\
 \begin{align}\label{eq:para1}
-\vec{x}_i = \myvec{ 0\\ 0} + \mu_i \myvec{0\\1}
+\vec{x}_i = \myvec{ 1\\ 0} + \mu_i \myvec{0\\1}
 \end{align}
-Substituting \mu_i value in \eqref{eq:para1} we get
+Substituting \mu_1, \mu_2 value in \eqref{eq:para1} we get
 
 \begin{align}
-\vec{x}_i = \myvec{0\\0} + 1\myvec{0\\1}\\
-\implies\vec{K}=\myvec{0\\1}
+\vec{x}_i = \myvec{1\\0} + 1\myvec{0\\1}\\
+\implies\vec{K_1}=\myvec{1\\1}
+\end{align}
+\begin{align}
+\vec{x}_i = \myvec{1\\0} + -1\myvec{0\\1}\\
+\implies\vec{L_1}=\myvec{1\\-1}
+\end{align}
+For \vec{x}= 4, 
+\begin{align}\label{eq:para2}
+\vec{x}_i = \myvec{ 4\\ 0} + \mu_i \myvec{0\\1}
+\end{align}
+\begin{align}
+\vec{x}_i = \myvec{4\\0} + 1\myvec{0\\1}\\
+\implies\vec{K_2}=\myvec{4\\1}
+\end{align}
+\begin{align}
+\vec{x}_i = \myvec{4\\0} + -1\myvec{0\\1}\\
+\implies\vec{L_2}=\myvec{4\\-1}
 \end{align}
 The area enclosed by parabola and line can be given as\\
 A = Area under line - Area under curve
